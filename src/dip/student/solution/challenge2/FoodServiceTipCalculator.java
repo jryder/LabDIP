@@ -11,24 +11,30 @@ package dip.student.solution.challenge2;
 
 
 public class FoodServiceTipCalculator implements TipCalculator{
-    private static double minBill = 0.00;
-    private static String billError = "Error: bill must be greater than or equal to " + minBill;
-    private static final double rateGood = 0.20;
-    private static final double rateFair = 0.15;
-    private static final double ratePoor = 0.10;
+    private static final double minBill = 0.00;
+    private static final String billError = "Error: bill must be greater than or equal to " + minBill;
+    private double rateGood = 0.20;
+    private double rateFair = 0.15;
+    private double ratePoor = 0.10;
     private double bill = 0.00;
+
+    public double getBill() {
+	return bill;
+    }
+
+    public void setBill(double bill) {
+	this.bill = bill;
+    }
     
-    public enum ServiceQuality {GOOD, FAIR, POOR}
     private ServiceQuality serviceQuality;
   
     
  
     @Override
-    public double getTip() {
+    public double getTip(ServiceQuality quality) {
 	
         if(bill < minBill) {
-            throw new IllegalArgumentException(
-                    "error: base tip must be greater than or equal to zero");
+            throw new IllegalArgumentException(billError);
         }	
 	
         double tip = 0.00; // always initialize local variables
