@@ -13,9 +13,6 @@ package dip.student.solution.challenge2;
 public class FoodServiceTipCalculator implements TipCalculator{
     private static final double minBill = 0.00;
     private static final String billError = "Error: bill must be greater than or equal to " + minBill;
-    private double rateGood = 0.20;
-    private double rateFair = 0.15;
-    private double ratePoor = 0.10;
     private double bill = 0.00;
 
     public double getBill() {
@@ -25,13 +22,10 @@ public class FoodServiceTipCalculator implements TipCalculator{
     public void setBill(double bill) {
 	this.bill = bill;
     }
-    
-    private ServiceQuality serviceQuality;
-  
-    
+       
  
     @Override
-    public double getTip(ServiceQuality quality) {
+    public double getTip(ServiceQuality serviceQuality) {
 	
         if(bill < minBill) {
             throw new IllegalArgumentException(billError);
