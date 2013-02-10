@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Challenge1;
+package dip.student.solution.challenge1;
 
 import javax.swing.JOptionPane;
 

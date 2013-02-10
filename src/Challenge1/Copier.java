@@ -1,5 +1,5 @@
 
-package Challenge1;
+package dip.student.solution.challenge1;
 
 /**
  *
