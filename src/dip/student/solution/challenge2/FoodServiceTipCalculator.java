@@ -6,7 +6,7 @@ package dip.student.solution.challenge2;
  *
  * Any other best practice violations? Fix them too.
  *
- * @author your name goes here
+ * @author Jordan Ryder
  */
 
 
@@ -15,37 +15,14 @@ public class FoodServiceTipCalculator implements TipCalculator{
     private static final String billError = "Error: bill must be greater than or equal to " + minBill;
     private double bill = 0.00;
 
-    public double getBill() {
-	return bill;
-    }
-
-    public void setBill(double bill) {
-	this.bill = bill;
-    }
-       
- 
+    
     @Override
-    public double getTip(ServiceQuality serviceQuality) {
+    public double getTip(double tipRate) {
 	
         if(bill < minBill) {
             throw new IllegalArgumentException(billError);
         }	
-	
-        double tip = 0.00; // always initialize local variables
-
-	switch(serviceQuality) {
-            case GOOD:
-                tip = bill * rateGood;
-                break;
-            case FAIR:
-                tip = bill * rateFair;
-                break;
-            case POOR:
-                tip = bill * ratePoor;
-                break;
-        }
-        return tip;
+         return bill * tipRate;
     }
-
 
 }
