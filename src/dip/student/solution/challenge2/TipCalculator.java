@@ -13,4 +13,7 @@ public interface TipCalculator {
 
     public abstract double getTip(double tipRate);
     
+    
+    
+    
 }

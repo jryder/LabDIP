@@ -12,9 +12,29 @@ public class TipperGood implements TipRates {
     public final double rateFair = 0.18;
     public final double ratePoor = 0.14;    
     
+    
     @Override
-    public double getTipRate(ServiceQuality quality) {
-	throw new UnsupportedOperationException("Not supported yet.");
+    public double getTipRate() {
+	
+	//get service quality from user
+	GUIReader r = new GUIReader("How was the service (poor, fair, good)?");
+	ServiceQuality quality = ServiceQuality.valueOf(r.read());
+	
+	double tipRate = 0.00;
+	
+	switch(quality){
+	    case good : tipRate = rateGood;
+		break;
+	    case fair: tipRate = rateFair;
+		break;
+	    case poor: tipRate = ratePoor;
+		break;
+	}	
+	return tipRate;
+	
+	
     }
+    
+    
     
 }

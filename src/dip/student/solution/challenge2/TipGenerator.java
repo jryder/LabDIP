@@ -1,18 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
+
 package dip.student.solution.challenge2;
 
 /**
  *
- * @author jorda_000
+ * @author Jordan Ryder
  */
 public class TipGenerator {
     
     public double getTip(TipRates r, TipCalculator c){
 	
-	r.getTipRate(TipRates.ServiceQuality.good)
+	//all of the complexity is handled in the low level classes.  Pass in the proper rate classes and 
+	//any extra variables needed will be requested of the user during the program running
+	//love the simplicity on the front end!  :D
+	
+	return c.getTip(r.getTipRate());
 	
     }
     

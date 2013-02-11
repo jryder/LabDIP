@@ -21,8 +21,16 @@ public class GUIReader implements Reader {
     }
     
     @Override
-    public void read() {
+    public String read() {
 	this.message = JOptionPane.showInputDialog(null, message, prompt, 1);
+	return this.message;
+	
+    }
+
+    
+    @Override
+    public void setPrompt(String prompt) {
+	this.prompt = prompt;
     }
 
     

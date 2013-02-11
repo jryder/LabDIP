@@ -9,5 +9,7 @@ package dip.student.solution.challenge2;
 
 public interface Reader {
     
-    public abstract void read();   
+    public abstract String read();
+    public abstract void setPrompt(String prompt);
+ 
 }
