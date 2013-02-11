@@ -10,5 +10,6 @@ package dip.student.solution.challenge2;
  */
 public class TipGenerator {
     
+    public double getTip
     
 }
