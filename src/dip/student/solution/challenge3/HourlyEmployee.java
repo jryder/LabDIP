@@ -11,7 +11,6 @@ public class HourlyEmployee implements Employee {
     double hourlyRate;
     double totalHrsForYear;
 
-    
     /**
      * Convenience constructor. Is this the best way to go?
      * @param hourlyRate - the rate per hour that the employee is paid

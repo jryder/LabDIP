@@ -3,6 +3,17 @@ import java.text.NumberFormat;
 import javax.swing.JOptionPane;
 /**
  * @author Jordan Ryder
+ * 
+ * The program could be done different in regards to the TipRates, but I wanted
+ * to try and play around with having interchangeable classes, and this provides 
+ * that flexibility.  The problem with the different TipCalculators is that they
+ * require different variables, so in order to have polymorphism, the variables
+ * have to be passed in from the user when the program is actually running, because
+ * they wouldn't be interchangeable otherwise due to the different properties.
+ * 
+ * 
+ * 
+ * 
  */
 public class Startup {
  

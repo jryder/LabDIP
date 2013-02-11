@@ -9,6 +9,8 @@ package dip.student.solution.challenge3;
  */
 public interface Employee {
 
+    //nothing more is really needed, everything else for this program is specific 
+    //to the employee type
     public double getAnnualWages();
 
 }
