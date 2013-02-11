@@ -13,7 +13,8 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private static final double maxBill = 100.00;
     private static final String billError = "Error: bill must be between " + minBill + " and " + maxBill;
     private double bagCount;
-    private double baseTipPerBag;
+    private double baseTipPerBag; //in order for this class to be compatible with the TipCalulator interface, it can't have this modified at the application level.
+    //it could still be changed, so we'll leave that flexibility in, but will not likely happen due to the interchangeability between this and other classes
     
     
     public void setBaseTipPerBag(double baseTipPerBag) {

@@ -10,6 +10,10 @@ package dip.student.solution.challenge2;
  */
 public class TipGenerator {
     
-    public double getTip
+    public double getTip(TipRates r, TipCalculator c){
+	
+	r.getTipRate(TipRates.ServiceQuality.good)
+	
+    }
     
 }
