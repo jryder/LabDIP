@@ -1,27 +1,42 @@
 package dip.student.solution.challenge3;
-
-import dip.lab1.*;
-
 /**
- * A simple implementation sub-class of Employee. These are low-level classes
- * in the DIP. Does it meet the rules of DIP? If not fix it.
- *
- * @author your name goes here
+
+ * @author Jordan Ryder
  */
-public class SalariedEmployee extends Employee {
+public class SalariedEmployee implements Employee {
 
-    /** default constructor. Is this the best way to go? */
+    double annualSalary;
+    double annualBonus;
+
+
+    
     public SalariedEmployee() {}
-
     /**
      * Convenience constructor. Is this the best way to go?
      * @param annualSalary - the employee's annual salary
      * @param annualBonus - a bonus benefit, if any
      */
+    
     public SalariedEmployee(double annualSalary, double annualBonus) {
         setAnnualSalary(annualSalary);
         setAnnualBonus(annualBonus);
     }
-
     
+    public final double getAnnualBonus() {
+        return annualBonus;
+    }
+    
+    public final void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+	
+	
+    public final void setAnnualBonus(double annualBonus) {
+	this.annualBonus = annualBonus;
+    }  
+
+    @Override
+    public double getAnnualWages() {
+	return this.annualBonus + this.annualSalary;
+    }
 }
