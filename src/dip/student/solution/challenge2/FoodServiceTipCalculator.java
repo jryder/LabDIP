@@ -16,8 +16,14 @@ public class FoodServiceTipCalculator implements TipCalculator{
     private double bill = 0.00;
 
     
+    
+
+    
     @Override
     public double getTip(double tipRate) {
+	
+	Reader reader = new GUIReader("How much was the bill?");
+	bill = Double.valueOf(reader.read());	
 	
         if(bill < minBill) {
             throw new IllegalArgumentException(billError);

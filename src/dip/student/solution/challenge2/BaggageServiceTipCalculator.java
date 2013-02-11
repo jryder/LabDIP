@@ -16,9 +16,11 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private double baseTipPerBag; //in order for this class to be compatible with the TipCalulator interface, it can't have this modified at the application level.
     //it could still be changed, so we'll leave that flexibility in, but will not likely happen due to the interchangeability between this and other classes
     
+       
     
-    //base constructor.  Must get all values for this type of tipping calculation
-    public BaggageServiceTipCalculator(){
+    @Override
+    public double getTip(double tipRate) {   
+	
 	Reader reader = new GUIReader("What is the base tip per bag?");
 	double baseTip;
 	
@@ -32,13 +34,9 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     
 	reader.setPrompt("How many bags did you have?");
 	
-	bagCount = Double.valueOf(reader.read());
-
-    }
-    
-    
-    @Override
-    public double getTip(double tipRate) {   
+	bagCount = Double.valueOf(reader.read());	
+	
+	
 	return baseTipPerBag * bagCount * (1 + tipRate);
     }
 

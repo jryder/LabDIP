@@ -22,7 +22,7 @@ public class GUIReader implements Reader {
     
     @Override
     public String read() {
-	this.message = JOptionPane.showInputDialog(null, message, prompt, 1);
+	this.message = JOptionPane.showInputDialog(null, null, prompt, 1);
 	return this.message;
 	
     }

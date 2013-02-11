@@ -11,7 +11,7 @@ public class TipperGood implements TipRates {
     public final double rateGood = 0.22;
     public final double rateFair = 0.18;
     public final double ratePoor = 0.14;    
-    
+    public final String desc = "Good Tipper";    
     
     @Override
     public double getTipRate() {
@@ -35,6 +35,9 @@ public class TipperGood implements TipRates {
 	
     }
     
-    
+    @Override
+    public String getDescription() {
+	return desc;
+    }    
     
 }

@@ -10,5 +10,7 @@ public interface TipRates {
 
     //this interface only requires the subclass to return a tip amount
     public static enum ServiceQuality {good, fair, poor}
-    public double getTipRate();
+    public abstract double getTipRate();
+    
+    public abstract String getDescription();
 }
